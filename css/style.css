@@ -1,0 +1,22 @@
+.bg-primary {
+  background-color: #004890;
+}
+
+.hero {
+  position: relative;
+  max-height: 30rem;
+}
+.hero img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+}
+
+.img-photos {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}

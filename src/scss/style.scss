@@ -1,0 +1,22 @@
+$primary: rgb(0, 72, 144);
+
+.bg-primary {
+	background-color: $primary;
+}
+
+.hero {
+	position: relative;
+	max-height: 30rem;
+	img {
+		object-fit: cover;
+	}
+}
+
+.hero-overlay {
+	position: absolute;
+}
+
+.img-photos {
+	object-fit: cover;
+	width: 100%;
+}
