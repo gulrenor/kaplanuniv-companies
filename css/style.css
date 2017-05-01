@@ -1,22 +1,120 @@
-.bg-primary {
-  background-color: #004890;
-}
+.bg-primary-blue {
+  background-color: #004890; }
+
+.bg-secondary-blue {
+  background-color: #3a75b8; }
+
+.fg-secondary-blue {
+  color: #3a75b8;
+  fill: #3a75b8; }
+
+.bg-tertiary-blue {
+  background-color: #d5e8f8; }
+
+.bg-primary-orange {
+  background-color: #eca12c; }
+
+.bg-primary-grey {
+  background-color: #e6e6e6; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold; }
+
+html {
+  font-size: 16px; }
+
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 1rem; }
+
+h1 {
+  font-size: 2.1825rem; }
+
+h2 {
+  font-size: 1.75rem; }
+
+h3 {
+  font-size: 1.4375rem; }
+
+h4 {
+  font-size: 1.375rem; }
+
+p {
+  line-height: 1.69rem; }
+
+li {
+  margin: .75rem 0; }
 
 .hero {
   position: relative;
-  max-height: 30rem;
-}
-.hero img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
+  max-height: 21rem;
+  background-color: #97b6da; }
+  .hero img {
+    object-position: right; }
+  .hero .btn {
+    visibility: hidden; }
+
+.border-1 {
+  border: 1px solid; }
+
+.shadow-text {
+  text-shadow: 1px 1px black; }
+
+.shadowed {
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3); }
 
 .hero-overlay {
-  position: absolute;
-}
+  position: absolute; }
+  .hero-overlay h1 {
+    font-size: 3.56rem; }
+  .hero-overlay h2 {
+    display: none; }
 
 .img-photos {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
+  object-fit: cover;
+  object-position: center;
+  min-height: 100%;
+  width: 100%; }
+
+.statistics {
+  font-weight: bold;
+  font-size: .825rem; }
+  .statistics * {
+    border-color: white; }
+  .statistics h1 {
+    font-size: 3.875rem;
+    font-weight: bold; }
+  .statistics sup {
+    font-size: 1.375rem;
+    font-weight: bold; }
+
+@media (min-width: 768px) {
+  .hero {
+    max-height: 21rem; }
+    .hero .btn {
+      visibility: visible; } }
+
+@media (min-width: 992px) {
+  .cta {
+    position: relative;
+    bottom: 2.5rem;
+    height: 5rem; }
+  .hero {
+    max-height: 30rem; }
+    .hero .btn {
+      visibility: visible; }
+  .hero-overlay h1 {
+    font-size: 5.125rem; }
+  .hero-overlay h2 {
+    font-size: 1.875rem; } }
+
+.logo {
+  max-height: 80px;
+  max-width: 100%; }
+
+.quotes-carousel .slick-dots button::before {
+  font-size: 20px;
+  line-height: 20px; }

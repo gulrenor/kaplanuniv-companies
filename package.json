@@ -1,7 +1,7 @@
 {
   "name": "kaplanuniv-companies",
   "version": "1.0.0",
-  "description": "A Pen created at CodePen.io. You can find this one at http://codepen.io/gulrenor/pen/ryoZyB.",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

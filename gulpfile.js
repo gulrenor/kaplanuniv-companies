@@ -18,12 +18,13 @@ var concat = require('gulp-concat');
 // Pug
 var pug = require('gulp-pug');
 
+// Source locations
 var dirSass_In = 'src/scss/**/*.scss';
 var dirCSS_Out = 'css/';
 var dirJS_In = 'src/js/**/*.js';
 var dirJS_Out = 'js/';
 var dirPug_In = 'src/pug/**/*.pug';
-var dirPug_Out = '/**/';
+var dirPug_Out = '.';
 
 // S/CSS task
 gulp.task('styles', function() {
@@ -52,6 +53,9 @@ gulp.task('scripts', function() {
 gulp.task('views', function() {
   gulp.src(dirPug_In)
     .pipe(plumber())
+    .pipe(pug({
+      //options
+    }))
     .pipe(gulp.dest(dirPug_Out));
 });
 

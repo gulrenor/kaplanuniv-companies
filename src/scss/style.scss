@@ -1,22 +1,184 @@
-$primary: rgb(0, 72, 144);
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+$primary-blue: rgb(0, 72, 144);
+$secondary-blue: rgb(58, 117, 184);
+$tertiary-blue: rgb(213, 232, 248);
+$primary-orange: rgb(236, 161, 44);
+$bg-hero: rgb(151, 182, 218);
+$shadow: rgba(0, 0, 0, .3);
+$primary-grey: rgb(230, 230, 230);
 
-.bg-primary {
-	background-color: $primary;
+.bg-primary-blue {
+  background-color: $primary-blue;
+}
+
+.bg-secondary-blue {
+  background-color: $secondary-blue;
+}
+
+.fg-secondary-blue {
+  color: $secondary-blue;
+  fill: $secondary-blue;
+}
+
+.bg-tertiary-blue {
+  background-color: $tertiary-blue;
+}
+
+.bg-primary-orange {
+  background-color: $primary-orange;
+}
+
+.bg-primary-grey {
+  background-color: $primary-grey;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.1825rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.4375rem;
+}
+
+h4 {
+  font-size: 1.375rem;
+}
+
+p {
+  line-height: 1.69rem;
+}
+
+li {
+  margin: .75rem 0;
 }
 
 .hero {
-	position: relative;
-	max-height: 30rem;
-	img {
-		object-fit: cover;
-	}
+  position: relative;
+  max-height: 21rem;
+  background-color: $bg-hero;
+
+  img {
+    object-position: right;
+  }
+
+  .btn {
+    visibility: hidden;
+  }
+}
+
+.border-1 {
+  border: 1px solid;
+}
+
+.shadow-text {
+  text-shadow: 1px 1px $black;
+}
+
+.shadowed {
+  box-shadow: 2px 2px 1px $shadow;
 }
 
 .hero-overlay {
-	position: absolute;
+  position: absolute;
+
+  h1 {
+    font-size: 3.56rem;
+  }
+
+  h2 {
+    display: none;
+  }
 }
 
 .img-photos {
-	object-fit: cover;
-	width: 100%;
+  object-fit: cover;
+  object-position: center;
+  min-height: 100%;
+  width: 100%;
+}
+
+.statistics {
+  font-weight: bold;
+  font-size: .825rem;
+
+  * {
+    border-color: $white;
+  }
+
+  h1 {
+    font-size: 3.875rem;
+    font-weight: bold;
+  }
+
+  sup {
+    font-size: 1.375rem;
+    font-weight: bold;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    max-height: 21rem;
+
+    .btn {
+      visibility: visible;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .cta {
+    position: relative;
+    bottom: 2.5rem; //half
+    height: 5rem;
+  }
+
+  .hero {
+    max-height: 30rem;
+
+    .btn {
+      visibility: visible;
+    }
+  }
+
+  .hero-overlay {
+    h1 {
+      font-size: 5.125rem;
+    }
+
+    h2 {
+      font-size: 1.875rem;
+    }
+  }
+}
+
+.logo {
+  max-height: 80px;
+  max-width: 100%;
+}
+
+.quotes-carousel {
+  .slick-dots button::before {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

@@ -1,198 +1,306 @@
-main.container-fluid
-	header.row
-		nav.navbar.navbar-toggleable-md.col.bg-primary
-			button.navbar-toggler.navbar-toggler-right(type="button" data-toggle="collapse" data-target="#mainNav")
-				span.navbar-toggler-icon
-			.navbar-brand
-				img(src="http://placehold.it/200x50")
-			#mainNav.collapse.navbar-collapse
-				.nav-text.ml-auto 
-					h3 Call: 1-866-527-5268
-				.navbar-nav.justify-content-end
-					.nav-item
-						a.nav-link(href="#")
-							i.fa.fa-comment
-							| Chat now
-					.nav-item
-						a.nav-link(href="#") Enroll
+extends template
 
-	
-	.hero.row.d-flex.justify-content-center
-		img(src="http://placehold.it/1920x1080")
-		.hero-overlay
-			h1.text-lg-center Your Career Success<br/>On your Schedule
-			h2.text-lg-center Get the Kaplan Program Guide
-			
-			.row.justify-content-center
-				a.btn.btn-primary.col-3(href="#") Request information
-	
-	section.py-5
-		.row
-			.col-8.mx-auto
-				h1.text-center Welcome [Company] employees
-				p.text-center Kaplan University is pleased to be working with [Company] to provide employees and immediate family members the opportunity to pursue educational and career goals&mdash;while receiving a 20% tuition grawnt on Kaplan University courses. *
-				p.text-center With 94% of our graduates feeling prepared to reach their career goals, Kaplan University is not just the choice of ambitious working adults. It's also the choice of your employer to recognize, develop and support talented employees, like you.
-		.row.px-5
-			// Triptych
-			.col-12.col-lg-4.px-5
-				h2.text-center.text-uppercase Study On Your Own Schedule
-				ul
-					li Take classes online
-					li Take classes on-campus
-					li New terms start every few weeks
-			.col-12.col-lg-4.px-5
-				h2.text-center.text-uppercase Personalized Programs
-				ul
-					li More than 180 degree programs
-					li Small class size
-					li Experienced faculty and support
-			.col-12.col-lg-4.px-5
-				h2.text-center.text-uppercase Within Your Reach
-				ul
-					li $35.8 million scholarships and grants awarded in the 2014-2015
-					li More than $345 million saved in our credit transfer program in 2015<sup>*</sup>
+block content
+  main.container-fluid
+    header.row
+      nav.navbar.col.bg-primary-blue.text-white.px-4.d-flex.flex-row
+        .navbar-brand.col-6.col-lg-3.d-flex.align-items-center
+          img.logo(src="img/logo.png")
+        #mainNav.col-6.col-lg.d-flex.flex-row.justify-content-end
+          .nav-text.ml-auto.d-flex.align-items-center.hidden-md-down
+            h3.m-0 Call: 1-866-527-5268
+          .navbar-header.justify-content-end.d-flex.flex-row.align-items-center
+            .nav-item.rounded.border-1.ml-2.hidden-md-down
+              a.nav-link.text-white(href="#")
+                i.fa.fa-comment.mr-2
+                | Chat now
+            .nav-item.rounded.ml-2.hidden-lg-up.align-items-center.justify-content.center
+              a.nav-link.text-white(href="#")
+                i.fa.fa-fw.fa-2x.fa-comment.mr-2
+                | Chat
 
-		aside.row
-			.col-10.mx-auto.bg-info.rounded
-				.row
-					.col-6.col-md-3
-						h1.text-center 94%
-						p.text-center of Kaplan grads feel prepared to reach their career goals
-					.col-6.col-md-3
-						h1.text-center 24
-						p.text-center Average undergraduate class size
-					.col-6.col-md-3
-						h1.text-center 38
-							sup K
-						p.text-center Many of 38,000 students are adult learners with families and work full time
-					.col-6.col-md-3
-						h1.text-center 9
-							sup K
-						p.text-center Kaplan students are active military, veterans spouses, or dependents.
+            .nav-item.rounded.border-1.ml-2.hidden-md-down
+              a.nav-link.text-white(href="#")
+                i.fa.fa-list-alt.mr-2
+                | Enroll
+            .nav-item.rounded.ml-2.hidden-lg-up.align-items-center.justify-content-center
+              a.nav-link.text-white(href="#")
+                i.fa.fa-fw.fa-2x.fa-list-alt.mr-2
+                | Enroll
 
-	section.row.bg-faded
-		.col-10.mx-auto
-			h1.text-center Choose from 180+ programs
-			h3.text-center Including undergraduate, graduate, and doctoral programs:
-			
-			.row
-				.col-3
-					ul
-						li Social and Behavioral Sciences
-						li Special Military Programs
-						li Information Technology
-				.col-3
-					ul
-						li Education
-						li Fire Science
-						li Health Sciences
-				.col-3
-					ul
-						li Legal Studies
-						li Open College
-						li Nursing
-				.col-3
-					ul
-						li Business
-						li Criminal Justice
-						li And many more
-				
-			.row
-				.col
-					p.text-center
-						em Kaplan University is accredited by The Higher Learning Commission (HLC).
+    // Hero CTA
+    .hero.row.d-flex.justify-content-center
+      img.img-photos.img-fluid(src="img/hero.png")
+      .hero-overlay.text-white.justify-content-center
+        .row.no-gutters.mt-5
+          h1.col-11.col-md-12.mx-auto.text-lg-center.shadow-text Your Career Success<br/>On your Schedule
+        .row.no-gutters
+          h2.col.text-lg-center.shadow-text Get the Kaplan Program Guide
+        .row.no-gutters.my-4
+          a.col-4.mx-auto.btn.btn-lg.bg-secondary-blue.text-white(href="#") Request information
+    .row.hidden-md-down
+      .cta.col-12.col-lg-8.mx-auto.bg-faded.rounded.shadowed.d-flex.align-items-center
+        .row.no-gutters.col-12
+          .col-8.col-lg-10.d-flex.flex-row.align-items-center
+            i.fa.fa-3x.fa-fw.fa-headphones
+            h3.m-0.mx-2.text-uppercase Connect Now
+            em.m-0 With a Kaplan University Advisor
+          .col-4.col-lg-2
+            a.col.btn.bg-primary-orange.text-white(href="#") Chat Now
 
-	section.hidden-md-down
-		.row.no-gutters
-			.col-6.px-5.bg-purple.text-white
-				i.fa.fa-3x.fa-graduation-cap
-				h2.text-center Match your career path to a degree
-				p.text-center Many careers at [Company] are powered by the skills gained through a Kaplan university degree. Our career calculator can help you quickly identify key skills needed for a future position, then match that career to a Kaplan degree.
-				.row
-					.col-3.mx-auto
-						a.btn.btn-primary Find your new career
-				
-			.col-6
-				img.img-responsive.img-photos(src="http://placehold.it/800x300")
-		
-		.row.no-gutters
-			.col-6
-				img.img-responsive.img-photos(src="http://placehold.it/800x400")
-			
-			.col-6.px-5.bg-purple.text-white
-				i.fa.fa-3x.fa-usd
-				h2.text-center Paying for school
-				p.text-center Kaplan University is committed to helping students reach their goals &ndash; academically and professionaly. You may qualify for a Kaplan University scholarship, which could reduce your tuition by as much as $500 per term &ndash; a savings of $6,000 or more on your bachelor's degree.
-				p.text-center Earned creditrs at a prior institution? The average bachelor's graduate with transfer credits saves over $32,000 in Kaplan University tuition. If you've got the dreams and the drive, we can help you reach your degree goals.
-				
-	section
-		.row
-			.col-10.mx-auto
-				h1.text-center Kaplan is a military friendly school
-				
-				.row.justify-content-center
-					.col-1.mx-3
-						img(src="http://placehold.it/100x100")
-					.col-1.mx-3
-						img(src="http://placehold.it/100x100")
-					.col-1.mx-3
-						img(src="http://placehold.it/100x100")
+    section.my-5.hidden-lg-up
+      .row
+        .col-12.col-md-8.mx-auto
+          .row
+            h1.col.text-center Request Information
+          .row.d-flex.justify-content-center
+            form.col.col-lg-8.row
+              input.col(type="text" placeholder="Zip Code")
+              button.col.btn.btn-warning(type="button")
+                | Next
+                i.fa.fa-fw.fa-caret-right
+          .row.mt-3
+            p.col.text-center Get the Kaplan Program Guide
 
-	section
-		.row
-			.col-12.col-lg-6.bg-purple.text-white
-				i.fa.fa-3x.fa-torch
-				h3.text-center Take 3 weeks to get to know us&hellip;
-				ul
-					li Get all the tools you need to suceed before you officially enroll.
-					li Experience Kaplan for 3 weeks at no cost beyond the application fee.
-				p.text-center That's the Kaplan Commitment
-				.row
-					.col-3.mx-auto
-						a.btn.btn-primary.text-center Request information
-			.col-12.col-lg-6.bg-primary.text-white
-				h3.text-center Education for successful, busy people
-				p.text-center For almost 80 years, Kaplan University has provided the cutting edge education to help students reach their dreams of career success. We've lead the way so that our students can too. If you're ready to be a leader, contact us today.
-				
-				h3.text-center What our students have to say:
-				
-				.row.border-2
-					.col-1 &laquo;
-					.col
-						em.text-center IT moves incredibly fast and it is important to stay ahead of the learning curve. My Kaplan University degree gave me a strong foundation and the tools I need to stay on top in the fascinating, innovative world of virtualization
-						p.text-center Aaron Lindeman
-						p.text-center D.S. in I.T. and Network Administration Graduate
-					.col-1 &raquo;
+    section.mb-5.hidden-lg-up
+      .row.bg-primary-blue.p-3
+        .col-12.col-md-8.mx-auto.text-white
+          .row
+            p.col.text-center Connect now with a Kaplan University Advisor
+          .row.d-flex.justify-content-center
+            a.col-5.btn.bg-secondary-blue 
+              i.fa.fa-fw.fa-lg.fa-comment.mr-1
+              | Chat Now
+            span.col-2 or
+            a.col-5.btn.bg-secondary-blue
+              i.fa.fa-fw.fa-lg.fa-phone.mr-1
+              | Call Us
 
-	section
-		h2.text-center Upcoming start dates
-		.row.border-1.bg-faded.justify-content-center
-			.col-2
-				p.text-center.text-uppercase Apr
-				p.text-center
-					strong 20
-			.col-2
-				p.text-center.text-uppercase May
-				p.text-center
-					strong 18
-			.col-2
-				p.text-center.text-uppercase May
-				p.text-center
-					strong 25
 
-	section
-		h2.text-center Get the Kaplan Program Guide
-		.row
-			.col-3.mx-auto
-				a.btn.btn-warning.text-white Request Information
-		em.text-center What are you waiting for?
-			
-	footer
-		.row.justify-content-center
-			.col-2 twit
-			.col-2 fb
-			.col-2 youtube
-						
-				
-			
-			
+    section.mb-5
+      .row
+        .col-8.mx-auto
+          h1.text-center.my-3 Welcome [Company] employees
+          .row.my-4
+            p.text-center Kaplan University is pleased to be working with [Company] to provide employees and immediate family members the opportunity to pursue educational and career goals&mdash;while receiving a 20% tuition grawnt on Kaplan University courses. *
+            p.text-center With 94% of our graduates feeling prepared to reach their career goals, Kaplan University is not just the choice of ambitious working adults. It's also the choice of your employer to recognize, develop and support talented employees, like you.
+      .row.px-5
+        // Triptych
+        .col-12.col-lg-4.px-5
+          .row.d-flex.justify-content-center
+            h3.text-center.text-uppercase.d-flex.align-items-center
+              .rounded-circle.bg-primary-blue.justify-content-center.text-white
+                i.fa.fa-2x.fa-fw.fa-comment.hidden-md-up
+              | Study On Your Own Schedule
+          .row
+            ul
+              li Take classes online
+              li Take classes on-campus
+              li New terms start every few weeks
+        .col-12.col-lg-4.px-5
+          .row.d-flex.justify-content-center
+            h3.text-center.text-uppercase.d-flex.align-items-center
+              .rounded-circle.bg-primary-blue.justify-content-center.text-white
+                i.fa.fa-2x.fa-fw.fa-comment.hidden-md-up
+              | Personalized Programs
+          .row
+            ul
+              li More than 180 degree programs
+              li Small class size
+              li Experienced faculty and support
+        .col-12.col-lg-4.px-5
+          .row.d-flex.justify-content-center
+            h3.text-center.text-uppercase.d-flex.align-items-center
+              .rounded-circle.bg-primary-blue.justify-content-center.text-white
+                i.fa.fa-2x.fa-fw.fa-comment.hidden-md-up
+              | Within Your Reach
+          .row
+            ul
+              li $35.8 million scholarships and grants awarded in the 2014-2015
+              li More than $345 million saved in our credit transfer program in 2015<sup>*</sup>
+
+      aside.statistics.row
+        .col-10.mx-auto.bg-tertiary-blue.fg-secondary-blue.rounded
+          .row
+            .col-6.col-md-3.border-1.py-3
+              h1.text-center 94
+                sup %
+              p.text-center of Kaplan grads feel prepared to reach their career goals
+            .col-6.col-md-3.border-1.py-3
+              h1.text-center 24
+              p.text-center Average undergraduate class size
+            .col-6.col-md-3.border-1.py-3
+              h1.text-center 38
+                sup K
+              p.text-center Many of 38,000 students are adult learners with families and work full time
+            .col-6.col-md-3.border-1.py-3
+              h1.text-center 9
+                sup K
+              p.text-center Kaplan students are active military, veterans spouses, or dependents.
+
+    section.row.bg-faded.py-5
+      .col-10.mx-auto
+        h1.text-center Choose from 180+ programs
+        h3.text-center Including undergraduate, graduate, and doctoral programs:
+
+        .row.my-4
+          .col-12.col-lg-3
+            ul
+              li Social and Behavioral Sciences
+              li Special Military Programs
+              li Information Technology
+          .col-12.col-lg-3
+            ul
+              li Education
+              li Fire Science
+              li Health Sciences
+          .col-12.col-lg-3
+            ul
+              li Legal Studies
+              li Open College
+              li Nursing
+          .col-12.col-lg-3
+            ul
+              li Business
+              li Criminal Justice
+              li And many more
+
+        .row.my-2
+          .col
+            p.text-center
+              em Kaplan University is accredited by The Higher Learning Commission (HLC).
+
+    section.hidden-md-down.mb-5
+      .row.no-gutters
+        .col-6.px-5.py-3.bg-primary-blue.text-white.d-flex.flex-column.justify-content-center
+          .row.my-3
+            i.col.fa.fa-3x.fa-graduation-cap.text-center
+          .row
+            h2.col.text-center Match your career path to a degree
+          .row
+            p.col.text-center Many careers at [Company] are powered by the skills gained through a Kaplan university degree. Our career calculator can help you quickly identify key skills needed for a future position, then match that career to a Kaplan degree.
+          .row.my-3
+            a.col-6.mx-auto.btn.bg-secondary-blue Find your new career
+
+        .col-6
+          img.img-photos.img-fluid(src="img/photo2.jpg")
+
+      .row.no-gutters
+        .col-6
+          img.img-photos.img-fluid(src="img/photo1.jpg")
+
+        .col-6.px-5.py-3.bg-primary-blue.text-white.d-flex.flex-column.justify-content-center
+          .row.my-3
+            i.col.fa.fa-3x.fa-usd.text-center
+          .row
+            h2.col.text-center Paying for school
+          .row
+            p.text-center.mb-5 Kaplan University is committed to helping students reach their goals &ndash; academically and professionaly. You may qualify for a Kaplan University scholarship, which could reduce your tuition by as much as $500 per term &ndash; a savings of $6,000 or more on your bachelor's degree.
+            p.text-center Earned creditrs at a prior institution? The average bachelor's graduate with transfer credits saves over $32,000 in Kaplan University tuition. If you've got the dreams and the drive, we can help you reach your degree goals.
+
+    section
+      .row
+        .col-10.mx-auto
+          h1.text-center Kaplan is a military friendly school
+
+          .row.justify-content-center
+            img(src="img/military-logos.png" alt="Military Logos")
+
+    section
+      .row
+        .col-12.col-lg-6.bg-primary-blue.text-white.d-flex.flex-column.justify-content.center.px-5.py-3
+          .row.my-3
+            i.col.fa.fa-3x.fa-fire.text-center
+          .row
+            h3.col.text-center Take 3 weeks to get to know us&hellip;
+          .row
+            ul.col-10.mx-auto
+              li Get all the tools you need to suceed before you officially enroll.
+              li Experience Kaplan for 3 weeks at no cost beyond the application fee.
+          .row
+            p.col.text-center That's the Kaplan Commitment
+          .row.my-3
+            a.col-8.col-lg-6.mx-auto.btn.bg-secondary-blue.text-center Request information
+        
+        .col-12.col-lg-6.bg-secondary-blue.text-white.d-flex.flex-column.justify-content.center.px-5.py-3.pb-5
+          .row.my-3
+            h3.col.text-center Education for successful, busy people
+          .row
+            p.col.text-center For almost 80 years, Kaplan University has provided the cutting edge education to help students reach their dreams of career success. We've lead the way so that our students can too. If you're ready to be a leader, contact us today.
+          .row
+            h4.col.text-center What our students have to say:
+          
+          // Quotes carousel
+          #quotesCarousel.quotes-carousel.row.border-1.m-2.py-3
+            .col
+              .row.no-gutters
+                .col-2.d-flex.align-items-start.justify-content-center
+                  i.fa.fa-fw.fa-2x.fa-quote-left
+                .col.text-center
+                  em IT moves incredibly fast and it is important to stay ahead of the learning curve. My Kaplan University degree gave me a strong foundation and the tools I need to stay on top in the fascinating, innovative world of virtualization
+                .col-2.d-flex.align-items-end.justify-content-center
+                  i.fa.fa-fw.fa-2x.fa-quote-right
+              .row.mt-2
+                .col.text-center
+                  p.m-0 Aaron Lindeman
+                  p.m-0 D.S. in I.T. and Network Administration Graduate
+            .col
+              .row.no-gutters
+                .col-2.d-flex.align-items-start.justify-content-center
+                  i.fa.fa-fw.fa-2x.fa-quote-left
+                .col.text-center
+                  em IT moves incredibly fast and it is important to stay ahead of the learning curve. My Kaplan University degree gave me a strong foundation and the tools I need to stay on top in the fascinating, innovative world of virtualization
+                .col-2.d-flex.align-items-end.justify-content-center
+                  i.fa.fa-fw.fa-2x.fa-quote-right
+              .row.mt-2
+                .col.text-center
+                  p.m-0 Aaron Lindeman
+                  p.m-0 D.S. in I.T. and Network Administration Graduate
+
+
+    section
+      .row.my-5.py-5
+        .col
+          .row
+            h2.col.text-center Upcoming start dates
+          .row.justify-content-center
+            #calendarCarousel.col-12.col-lg-4.row
+              .col.border-1
+                p.text-center.text-uppercase.m-0 Apr
+                h3.text-center 20
+              .col.border-1
+                p.text-center.text-uppercase.m-0 May
+                h3.text-center 18
+              .col.border-1
+                p.text-center.text-uppercase.m-0 May
+                h3.text-center 25
+              .col.border-1
+                p.text-center.text-uppercase.m-0 Jun
+                h3.text-center 5
+              .col.border-1
+                p.text-center.text-uppercase.m-0 Jun
+                h3.text-center 18
+              .col.border-1
+                p.text-center.text-uppercase.m-0 Jul
+                h3.text-center 1
+
+
+    section
+      .row.mt-5.py-5.bg-faded
+        .col
+          .row
+            h2.col.text-center Get the Kaplan Program Guide
+          .row.my-3
+            a.col-6.col-lg-3.mx-auto.btn.btn-warning.text-white Request Information
+          .row
+            em.col.text-center What are you waiting for?
+
+    footer
+      .row.py-5.bg-primary-grey
+        .col-12.col-lg-4.row.mx-auto
+          .col.text-center
+            i.fa.fa-fw.fa-3x.fa-twitter
+          .col.text-center
+            i.fa.fa-fw.fa-3x.fa-facebook
+          .col.text-center
+            i.fa.fa-fw.fa-3x.fa-youtube
